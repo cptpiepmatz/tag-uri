@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     tags:
-      - 'v*.*.*' # Matches tags like vx.y.z (e.g., v1.0.0)
+      - "v*.*.*" # Matches tags like vx.y.z (e.g., v1.0.0)
 
 jobs:
   publish:

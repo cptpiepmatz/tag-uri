@@ -1,7 +1,7 @@
 <h1 align="center">@cptpiepmatz/tag-uri</h1>
 <p align="center">
   <b>
-    <a href="https://taguri.org">RFC 4151 Tag URI</a> 
+    <a href="https://taguri.org">RFC 4151 Tag URI</a>
     parser and generator
   </b>
 </p>
@@ -17,35 +17,37 @@
     ">
   </a>
   <a href="https://github.com/cptpiepmatz/tag-uri/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/cptpiepmatz/tag-uri?style=for-the-badge"/>  
+    <img alt="License" src="https://img.shields.io/github/license/cptpiepmatz/tag-uri?style=for-the-badge"/>
   </a>
 </p>
 
 ## About
-The main entry point and default export of this library is the `TagUri` class, 
-which is all you’ll usually need. 
-It simplifies working with [RFC 4151 Tag URIs](https://taguri.org) by parsing 
-them into their components or allowing you to construct new ones 
-programmatically.
+
+The main entry point and default export of this library is the `TagUri` class,
+which is all you’ll usually need. It simplifies working with
+[RFC 4151 Tag URIs](https://taguri.org) by parsing them into their components or
+allowing you to construct new ones programmatically.
 
 ## Features
-- **Parsing Tag URIs:** 
-  Extract structured components like the authority name, date, and specific part.
 
-- **Helpful Errors:** 
-  Parsing failures include errors pointing to where the issue occurred.
+- **Parsing Tag URIs:** Extract structured components like the authority name,
+  date, and specific part.
 
-- **Tag URI Construction:**
-  Create tag URIs using the `TagUri` constructor 
-  *(note: validation is not yet implemented)*.
+- **Helpful Errors:** Parsing failures include errors pointing to where the
+  issue occurred.
 
-- **Platform Agnostic:**
-  Fully dependency-free, works with [Deno](https://deno.com), 
-  [Node.js](https://nodejs.org), and modern browsers using 
+- **Tag URI Construction:** Create tag URIs using the `TagUri` constructor
+  _(note: validation is not yet implemented)_.
+
+- **Platform Agnostic:** Fully dependency-free, works with
+  [Deno](https://deno.com), [Node.js](https://nodejs.org), and modern browsers
+  using
   [baseline web compatibility](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility).
 
 ## Usage
+
 ### Parsing Tag URIs
+
 ```ts
 import TagUri from "@cptpiepmatz/tag-uri";
 
@@ -60,6 +62,7 @@ console.log(tag.specific); // web/externalHome
 ```
 
 ### Constructing Tag URIs
+
 ```ts
 import TagUri from "@cptpiepmatz/tag-uri";
 
@@ -75,7 +78,7 @@ const tag = new TagUri({
     day: null,
   },
   specific: "web/externalHome",
-  fragment: null 
+  fragment: null,
 });
 
 console.log(tag.get()); // tag:timothy@hpl.hp.com,2001:web/externalHome
