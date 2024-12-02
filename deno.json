@@ -1,0 +1,21 @@
+{
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "name": "@cptpiepmatz/tag-uri",
+  "description": "RFC 4151 Tag URI parser and generator",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./src/mod.ts",
+  "specification": [
+    "https://taguri.org",
+    "https://datatracker.ietf.org/doc/html/rfc4151"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cptpiepmatz/tag-uri.git"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["prefer-const"]
+    }
+  }
+}
