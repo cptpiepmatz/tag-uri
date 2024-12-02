@@ -1,6 +1,7 @@
 import type { TagUriData } from "./data.ts";
 import { UnreachableError } from "./error.ts";
 import { TagUriParser } from "./parser.ts";
+export { TagUriParsingError } from "./error.ts";
 
 const internal = Symbol("internal");
 
