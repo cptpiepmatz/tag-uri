@@ -1,5 +1,5 @@
 import { expect } from "jsr:@std/expect";
-import TagUri from "./mod.ts";
+import { TagUri } from "./mod.ts";
 import { TagUriParsingError } from "./error.ts";
 
 const tags = [

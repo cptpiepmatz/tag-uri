@@ -90,5 +90,3 @@ export class TagUri {
     }
   }
 }
-
-export default TagUri;

@@ -49,7 +49,7 @@ allowing you to construct new ones programmatically.
 ### Parsing Tag URIs
 
 ```ts
-import TagUri from "@cptpiepmatz/tag-uri";
+import { TagUri } from "@cptpiepmatz/tag-uri";
 
 // Parse a tag URI
 const tag = TagUri.parse("tag:timothy@hpl.hp.com,2001:web/externalHome");
@@ -64,7 +64,7 @@ console.log(tag.specific); // web/externalHome
 ### Constructing Tag URIs
 
 ```ts
-import TagUri from "@cptpiepmatz/tag-uri";
+import { TagUri } from "@cptpiepmatz/tag-uri";
 
 // Create a new tag URI
 const tag = new TagUri({
