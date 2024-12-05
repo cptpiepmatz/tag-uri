@@ -13,8 +13,10 @@
     <img alt="JSR Version" src="https://jsr.io/badges/@cptpiepmatz/tag-uri?style=for-the-badge"/>
   </a>
   <a href="https://jsr.io/@cptpiepmatz/tag-uri/doc">
-    <img alt="Docs via JSR" src="https://img.shields.io/badge/docs-%23083344?style=for-the-badge&logo=jsr
-    "/>
+    <img alt="Docs via JSR" src="https://img.shields.io/badge/docs-%23083344?style=for-the-badge&logo=jsr"/>
+  </a>
+  <a href="https://github.com/cptpiepmatz/tag-uri/actions/workflows/cicd.yml">
+    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/cptpiepmatz/tag-uri/cicd.yml?style=for-the-badge"/>
   </a>
   <a href="https://github.com/cptpiepmatz/tag-uri/blob/main/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/cptpiepmatz/tag-uri?style=for-the-badge"/>
