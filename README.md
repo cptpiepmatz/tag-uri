@@ -12,10 +12,6 @@
   <a href="https://jsr.io/@cptpiepmatz/tag-uri">
     <img alt="JSR Version" src="https://jsr.io/badges/@cptpiepmatz/tag-uri?style=for-the-badge"/>
   </a>
-  <a href="https://github.com/cptpiepmatz/tag-uri/actions">
-    <img alt="CI/CD Status" src="https://img.shields.io/github/actions/workflow/status/cptpiepmatz/tag-uri/cicd.yml?style=for-the-badge&logo=github&label=ci%2Fcd
-    ">
-  </a>
   <a href="https://github.com/cptpiepmatz/tag-uri/blob/main/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/cptpiepmatz/tag-uri?style=for-the-badge"/>
   </a>
