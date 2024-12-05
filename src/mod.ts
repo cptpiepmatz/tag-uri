@@ -1,4 +1,4 @@
-import { equals, TagUriData } from "./data.ts";
+import { equals, type TagUriData } from "./data.ts";
 import { TagUriParsingError, UnreachableError } from "./error.ts";
 import { TagUriParser } from "./parser.ts";
 
@@ -28,7 +28,7 @@ const internal = Symbol("internal");
  *
  * // Parse a tag URI
  * const tag = TagUri.parse("tag:timothy@hpl.hp.com,2001:web/externalHome");
- * 
+ *
  * // Access different parts of the tag URI
  * expect(tag.get()).toBe("tag:timothy@hpl.hp.com,2001:web/externalHome");
  * expect(tag.authorityName).toBe("timothy@hpl.hp.com");
@@ -78,7 +78,7 @@ export class TagUri {
 
   /**
    * Tagging entity of the `tag:` URI.
-   * 
+   *
    * Represents the `taggingEntity` part of the RFC.
    */
   get taggingEntity(): string {
@@ -87,7 +87,7 @@ export class TagUri {
 
   /**
    * Authority name of the `tag:` URI.
-   * 
+   *
    * Represents the `authorityName` part of the RFC.
    */
   get authorityName(): string {
@@ -101,10 +101,10 @@ export class TagUri {
 
   /**
    * DNS name of the authority name of the `tag:` URI.
-   * 
+   *
    * Represents the `DNSname` part of the RFC.
-   * 
-   * This value is nullable as `authorityName` can be either a dns name or an 
+   *
+   * This value is nullable as `authorityName` can be either a dns name or an
    * email address.
    */
   get dnsName(): string | null {
@@ -113,10 +113,10 @@ export class TagUri {
 
   /**
    * Email address of the authority name of the `tag:` URI.
-   * 
+   *
    * Represents the `emailAddress` part of the RFC.
-   * 
-   * This value is nullable as `authorityName` can be either a dns name or an 
+   *
+   * This value is nullable as `authorityName` can be either a dns name or an
    * email address.
    */
   get emailAddress(): string | null {
@@ -125,7 +125,7 @@ export class TagUri {
 
   /**
    * Date of the `tag:` URI.
-   * 
+   *
    * Represents the `date` part of the RFC.
    */
   get date(): string {
@@ -137,7 +137,7 @@ export class TagUri {
 
   /**
    * Year of the `tag:` URI.
-   * 
+   *
    * Represents the `year` part of the RFC.
    */
   get year(): string {
@@ -146,9 +146,9 @@ export class TagUri {
 
   /**
    * Month of the `tag:` URI.
-   * 
+   *
    * Represents the `month` part of the RFC.
-   * 
+   *
    * This value is nullable as `date` might contain only a year.
    * The `day` will then be also `null`.
    */
@@ -158,10 +158,10 @@ export class TagUri {
 
   /**
    * Day of the `tag:` URI.
-   * 
+   *
    * Represents the `day` part of the RFC.
-   * 
-   * This value is nullable as `date` might contain only a month and year or 
+   *
+   * This value is nullable as `date` might contain only a month and year or
    * only a year.
    */
   get day(): string | null {
@@ -170,9 +170,9 @@ export class TagUri {
 
   /**
    * Specific of the `tag:` URI.
-   * 
+   *
    * Represents the `specific` part of the RFC.
-   * 
+   *
    * Might be an empty string as they are valid according to the RFC.
    */
   get specific(): string {
@@ -181,17 +181,17 @@ export class TagUri {
 
   /**
    * Fragment of the `tag:` URI.
-   * 
+   *
    * Represents the `fragment` part of the RFC.
-   * 
+   *
    * Might be an empty string as they are valid according to the RFC.
    * Might also be `null` if the `#` is omitted.
-   * 
+   *
    * @example
    * ```ts
    * import { TagUri } from "@cptpiepmatz/tag-uri";
    * import { expect } from "jsr:@std/expect";
-   * 
+   *
    * expect(TagUri.parse("tag:example.com,2000:").fragment).toBeNull();
    * expect(TagUri.parse("tag:example.com,2000:#").fragment).toBe("");
    * expect(TagUri.parse("tag:example.com,2000:#abc").fragment).toBe("abc");
@@ -202,37 +202,37 @@ export class TagUri {
 
   /**
    * Compare two `TagUri` instances for equality.
-   * 
-   * This does a equality check on all fields in the internal, deconstructed 
+   *
+   * This does a equality check on all fields in the internal, deconstructed
    * representation.
-   * This allows comparing two instances without getting the string 
+   * This allows comparing two instances without getting the string
    * representation first.
-   * 
-   * @param other 
+   *
+   * @param other
    * Instance to compare against.
    * Allows comparison even if two different constructors were used.
-   * 
+   *
    * @example Allow comparison with different instances
    * ```ts
    * import { expect } from "jsr:@std/expect";
-   * 
+   *
    * const tag = "tag:timothy@hpl.hp.com,2001:web/externalHome";
    * const a = TagUri.parse(tag);
    * const b = TagUri.parse(tag);
-   * 
+   *
    * expect(a == b).toBe(false);
    * expect(a.equals(b)).toBe(true);
    * ```
-   * 
+   *
    * @returns `true`, if both instances represent the same tag.
    */
   equals(other: TagUri): boolean {
     return equals(this[internal], other[internal]);
   }
 
-  /** 
-   * Get the string representation of this instance. 
-   * 
+  /**
+   * Get the string representation of this instance.
+   *
    * @see {@link TagUri.prototype.get}
    */
   toString(): string {
