@@ -5,6 +5,33 @@ export { TagUriParsingError } from "./error.ts";
 
 const internal = Symbol("internal");
 
+/**
+ * Data structure containing the contents of a `tag:` URI.
+ * 
+ * Instances of this class hold the data for `tag:` URIs as defined by the
+ * [RFC 4151](https://datatracker.ietf.org/doc/html/rfc4151) or otherwise 
+ * described by [taguri.org](https://taguri.org).
+ * 
+ * Getting an instance of this can either be done by manually constructing one 
+ * by passing all the necessary data into the {@link constructor} or by parsing
+ * a `tag:` URI string with {@linkcode parse}.
+ * 
+ * By using {@linkcode get}, you can get the string representation of the tag.
+ * Other contained values can be accessed via the various getters.
+ * Some getters may return `null` as not every tag has to contain them 
+ * (e.g. the `day` of the `date`).
+ * 
+ * @example Get a instance via `parse`
+ * ```ts
+ * const tag = TagUri.parse("tag:timothy@hpl.hp.com,2001:web/externalHome");
+ * 
+ * // Access different parts of the tag URI
+ * console.log(tag.get()); // tag:timothy@hpl.hp.com,2001:web/externalHome
+ * console.log(tag.authorityName); // timothy@hpl.hp.com
+ * console.log(tag.date); // 2001
+ * console.log(tag.specific); // web/externalHome
+ * ```
+ */
 export class TagUri {
   private [internal]: TagUriData;
 
