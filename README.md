@@ -46,21 +46,23 @@ allowing you to construct new ones programmatically.
 
 ```ts
 import { TagUri } from "@cptpiepmatz/tag-uri";
+import { expect } from "jsr:@std/expect";
 
 // Parse a tag URI
 const tag = TagUri.parse("tag:timothy@hpl.hp.com,2001:web/externalHome");
 
 // Access different parts of the tag URI
-console.log(tag.get()); // tag:timothy@hpl.hp.com,2001:web/externalHome
-console.log(tag.authorityName); // timothy@hpl.hp.com
-console.log(tag.date); // 2001
-console.log(tag.specific); // web/externalHome
+expect(tag.get()).toBe("tag:timothy@hpl.hp.com,2001:web/externalHome");
+expect(tag.authorityName).toBe("timothy@hpl.hp.com");
+expect(tag.date).toBe("2001");
+expect(tag.specific).toBe("web/externalHome");
 ```
 
 ### Constructing Tag URIs
 
 ```ts
 import { TagUri } from "@cptpiepmatz/tag-uri";
+import { expect } from "jsr:@std/expect";
 
 // Create a new tag URI
 const tag = new TagUri({
@@ -77,5 +79,5 @@ const tag = new TagUri({
   fragment: null,
 });
 
-console.log(tag.get()); // tag:timothy@hpl.hp.com,2001:web/externalHome
+expect(tag.get()).toBe("tag:timothy@hpl.hp.com,2001:web/externalHome");
 ```
