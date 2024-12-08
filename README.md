@@ -7,21 +7,14 @@
 </p>
 
 <br>
+<div align="center">
+  
+  [![JSR Version](https://jsr.io/badges/@cptpiepmatz/tag-uri?style=for-the-badge)](https://jsr.io/@cptpiepmatz/tag-uri)
+  [![Docs via JSR](https://img.shields.io/badge/docs-%23083344?style=for-the-badge&logo=jsr)](https://jsr.io/@cptpiepmatz/tag-uri/doc)
+  [![Build Status](https://img.shields.io/github/actions/workflow/status/cptpiepmatz/tag-uri/cicd.yml?style=for-the-badge)](https://github.com/cptpiepmatz/tag-uri/actions/workflows/cicd.yml)
+  [![License](https://img.shields.io/github/license/cptpiepmatz/tag-uri?style=for-the-badge)](https://github.com/cptpiepmatz/tag-uri/blob/main/LICENSE)
 
-<p align="center">
-  <a href="https://jsr.io/@cptpiepmatz/tag-uri">
-    <img alt="JSR Version" src="https://jsr.io/badges/@cptpiepmatz/tag-uri?style=for-the-badge"/>
-  </a>
-  <a href="https://jsr.io/@cptpiepmatz/tag-uri/doc">
-    <img alt="Docs via JSR" src="https://img.shields.io/badge/docs-%23083344?style=for-the-badge&logo=jsr"/>
-  </a>
-  <a href="https://github.com/cptpiepmatz/tag-uri/actions/workflows/cicd.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/cptpiepmatz/tag-uri/cicd.yml?style=for-the-badge"/>
-  </a>
-  <a href="https://github.com/cptpiepmatz/tag-uri/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/cptpiepmatz/tag-uri?style=for-the-badge"/>
-  </a>
-</p>
+</div>
 
 ## About
 
